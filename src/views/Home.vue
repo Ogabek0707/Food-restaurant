@@ -582,7 +582,7 @@ const menu = () => {
 
 <style lang="scss" scoped>
 .img {
-    background-image: linear-gradient(#00152899, #00152899), url('../assets/images/Background\ Image.svg');
+    background-image: linear-gradient(#00152899, #00152899), url('../assets/images/Background Image (1).svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
