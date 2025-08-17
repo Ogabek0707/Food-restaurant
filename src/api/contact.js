@@ -2,7 +2,7 @@ import axiosClient from "./ApiClient";
 
 const contactApi = {
       Add(payload){
-            const url = "contacts"
+            const url = "contacts/"
             console.log(payload);
             return axiosClient.post(url,payload)
       },

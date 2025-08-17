@@ -1,5 +1,5 @@
 <template>
-    <section id="hero" class="w-full h-[100vh] img pt-[104px]">
+    <section id="hero" class="w-full h-[110vh] img pt-[104px]">
         <div class="w-full h-full flex justify-center items-center">
             <div class="w-[1022px] flex flex-col justify-center items-center text-center">
                 <div><img src="../assets/images/Union.svg" alt="union"></img></div>
@@ -59,8 +59,8 @@
                 <br>
                 <br>
                 <div class="flex gap-[16px] items-start">
-                    <img src="../assets/images/home-contact-image1.svg" alt="">
-                    <img src="../assets/images/home-contact-image2.svg" alt="">
+                    <img src="../assets/images/home-contact-image1.png" alt="">
+                    <img src="../assets/images/home-contact-image2.png" alt="">
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
         </div>
         <div class="w-full flex justify-center items-center flex-wrap gap-[15px] mt-[60px]">
             <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/ProductImage.svg" alt="">
+                <img src="../assets/images/ProductImage.png" alt="">
                 <div>
                     <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Appetizer</span>
                     <div class="flex items-center gap-[16px] my-[15px]">
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/make Chicken Wings BBQ from top view.svg" alt="">
+                <img src="../assets/images/make Chicken Wings BBQ from top view.png" alt="">
                 <div>
                     <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Main Course</span>
                     <div class="flex items-center gap-[16px] my-[15px]">
@@ -102,7 +102,7 @@
                 </div>
             </div>
             <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/ProductImage2.svg" alt="">
+                <img src="../assets/images/ProductImage2.png" alt="">
                 <div>
                     <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Main Course</span>
                     <div class="flex items-center gap-[16px] my-[15px]">
@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/make Creamy Pumpkin Soup from top view at fancy restaurant.svg" alt="">
+                <img src="../assets/images/make Creamy Pumpkin Soup from top view at fancy restaurant.png" alt="">
                 <div>
                     <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Appetizer</span>
                     <div class="flex items-center gap-[16px] my-[15px]">
@@ -131,7 +131,7 @@
                 </div>
             </div>
             <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/ProductImage3.svg" alt="">
+                <img src="../assets/images/ProductImage3.png" alt="">
                 <div>
                     <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Appetizer</span>
                     <div class="flex items-center gap-[16px] my-[15px]">
@@ -396,7 +396,7 @@
         </div>
         <div class="flex justify-around gap-[35px] w-[86%] m-auto pt-[50px]">
             <div class="bg-[#010614] p-[10px] rounded-[20px] max-w-[400px]">
-                <img src="../assets/images/hosting.svg" alt="">
+                <img src="../assets/images/hosting.png" alt="">
                 <div class="p-[14px]">
                     <span class="text-white text-[14px] font-medium">April 22, 2025</span>
                     <h1 class="text-white text-[24px] font-semibold leading-[114.99999999999999%] my-[12.5px]">Hosting
@@ -408,7 +408,7 @@
                 </div>
             </div>
             <div class="bg-[#010614] p-[10px] rounded-[20px] max-w-[400px]">
-                <img src="../assets/images/image.png" alt="">
+                <img src="../assets/images/Support.png" alt="">
                 <div class="p-[14px]">
                     <span class="text-white text-[14px] font-medium">April 17, 2025</span>
                     <h1 class="text-white text-[24px] font-semibold leading-[114.99999999999999%] my-[12.5px]">How We
@@ -419,7 +419,7 @@
                 </div>
             </div>
             <div class="bg-[#010614] p-[10px] rounded-[20px] max-w-[400px]">
-                <img src="../assets/images/dinner.svg" alt="">
+                <img src="../assets/images/dinner.png" alt="">
                 <div class="p-[14px]">
                     <span class="text-white text-[14px] font-medium">April 18, 2025</span>
                     <h1 class="text-white text-[24px] font-semibold leading-[114.99999999999999%] my-[12.5px]">Tips for
@@ -500,7 +500,7 @@
             </div>
         </div>
         <div class="flex justify-center items-center pt-[60px]">
-            <img src="../assets/images/Logo Text.svg" alt="">
+            <img src="../assets/images/Logo Text.png" alt="">
         </div>
     </footer>
 </template>
@@ -582,7 +582,7 @@ const menu = () => {
 
 <style lang="scss" scoped>
 .img {
-    background-image: linear-gradient(#00152899, #00152899), url('../assets/images/Background Image (1).svg');
+    background-image: linear-gradient(#00152899, #00152899), url('../assets/images/Background\ Image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
