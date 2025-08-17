@@ -234,7 +234,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted  } from 'vue';
 import router from '@/router';
 import img1 from "../assets/images/Testimonial Item.svg"
 import img2 from "../assets/images/Testimonial Item (1).svg"
@@ -277,7 +277,6 @@ const handleSubmit = async (e) => {
 const menu = () => {
     router.push({ name: "menu" })
 };
-
 
 </script>
 

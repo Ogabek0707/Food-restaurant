@@ -527,7 +527,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted  } from 'vue';
 import router from '@/router';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
@@ -597,7 +597,6 @@ const testimonials = [
 const menu = () => {
     router.push({ name: "menu" })
 }
-
 
 </script>
 

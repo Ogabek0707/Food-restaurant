@@ -1,15 +1,15 @@
 <template>
   <div class="relative">
-    <header class="w-full h-[104px] absolute top-0 left-0 z-10">
+    <header class="w-full h-[104px] absolute top-0 left-0 z-10" :class="route.name == 'login','register' ? 'bg-[#01101D]' : ''">
       <div class="w-full h-full flex justify-around items-center">
         <div><img src="./assets/images/Logo.svg" alt=""></div>
-        <div class="w-[412px] py-[16px] px-[24px] bg-[#00000077] rounded-[72px] flex justify-around items-center">
+        <div class="w-[412px] py-[16px] px-[24px] bg-[#00000077] rounded-[72px] flex justify-around items-center" :class="route.name == 'login','register' ? 'bg-gray-700' : ''">
           <div v-for="(item, index) in items" :key="index" >
             <router-link :to="item.path" class="text-white hover:text-gray-400" active-class="active"><span>{{ item.name }}</span></router-link>
           </div>
         </div>
         <div class="flex text-white">
-          <div class="flex items-center cursor-pointer"><svg-icon type="mdi" :path="mdiAccount" class="text-white w-[27px] h-[27px]" /><span class="pl-[5px]">Login</span></div>
+          <div class="flex items-center cursor-pointer" @click="login"><svg-icon type="mdi" :path="mdiAccount" class="text-white w-[27px] h-[27px]" /><span class="pl-[5px]">Login</span></div>
           <div class="flex items-center pl-[40px] cursor-pointer relative"><svg-icon type="mdi" :path="mdiCart" class="text-white w-[27px] h-[27px]" /><span class="pl-[5px]">Cart</span> <span v-if="cart.length > 0" class="absolute  right-[-28px]  bg-red-500 text-white text-[13px] font-bold px-[7px] py-[2px] rounded-[4px]">{{ cart.length }}</span></div>
         </div>
       </div>
@@ -24,16 +24,17 @@
 </template>
 
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiAccount, mdiCart, } from '@mdi/js';
 import { useCounterStore } from './stores/counter';
 import { storeToRefs } from 'pinia'
+import router from './router';
 
 const store = useCounterStore()
 
-
+const route = useRoute()
 const cart = ref([])
 
 function updateCart() {
@@ -59,6 +60,9 @@ const items = computed(() => [
     name: 'Location'
   },
 ])
+const login = () => {
+  router.push({name: "login"})
+}
 ;
 </script>
 

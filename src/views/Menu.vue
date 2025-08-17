@@ -262,7 +262,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted  } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
 import img1 from "../assets/images/Testimonial Item.svg"
@@ -326,7 +326,6 @@ const testimonials = [
 const menu = () => {
     router.push({ name: "menu" })
 };
-
 </script>
 
 <style lang="scss" scoped>

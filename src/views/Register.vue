@@ -3,31 +3,37 @@
         <section id="login" class="w-full h-[100%] py-[80px] bg-gray-100">
             <div class="flex justify-center gap-[60px]">
                 <div class=" p-[24px] w-[610px] rounded-[24px]">
-                    <h1 class="text-black text-[50px] text-center font-semibold">Login</h1>
-                    <Form @submit.prevent="handleSubmit" class="flex flex-col mt-[10px]">
+                    <h1 class="text-black text-[50px] text-center font-semibold">Register</h1>
+                    <Form @submit.prevent="handleSubmit" class="flex flex-col gap-[15px] mt-[10px]">
                         <div>
                             <label for="username" class="text-black text-[20px] ml-[5px]">Name</label>
                             <br>
-                            <InputText type="text" v-model="form.full_name" unstyled autocomplete="off" name="username"
+                            <InputText type="text" v-model="form.name" unstyled autocomplete="off" name="username"
                                 placeholder="Name"
                                 class="w-full text-black text-[17px] border-[2px] border-gray-500 focus:border-[#F4C73F] rounded-[12px] p-[12px] mt-[5px] outline-none" />
                         </div>
-                        
                         <div>
-                            <p class="text-blue-500 text-[20px] text-end mt-[12px] mr-[5px] mb-[-18px]"><span class="cursor-pointer" @click="forgotPassword">Forgot password ?</span></p>
+                            <label for="phone" class="text-black text-[20px] ml-[5px]">Phone</label>
+                            <br>
+                            <InputText unstyled v-model="form.phone" name="phone" autocomplete="off" type="number"
+                                placeholder="+1 234 567 890"
+                                class="w-full bg-transparent no-spinner text-black text-[17px] border-[2px] border-gray-500 focus:border-[#F4C73F] rounded-[12px] p-[12px] mt-[5px] outline-none" />
+                        </div>
+                        <div>
                             <label for="password" class="text-black text-[20px] ml-[5px]">Password</label>
                             <br>
-                            <InputText unstyled v-model="form.phone" name="password" autocomplete="off" type="password"
+                            <InputText unstyled v-model="form.password" name="password" autocomplete="off" type="password"
                                 placeholder="Password"
                                 class="w-full bg-transparent no-spinner text-black text-[17px] border-[2px] border-gray-500 focus:border-[#F4C73F] rounded-[12px] p-[12px] mt-[5px] outline-none" />
                         </div>
                         <Button unstyled type="submit" label="Login"
-                            class="bg-[#F4C73F] text-[18px] py-[12px] rounded-[24px] mt-[25px] font-medium" />
+                            class="bg-[#F4C73F] text-[18px] py-[12px] rounded-[24px] mt-[15px] font-medium" />
                         <div class="flex justify-between mt-[12px]">
-                            <p class="text-blue-500 text-[20px] ml-[10px]">Do you have an account ?</p>
-                            <div class="flex items-center cursor-pointer" @click="register">
-                                <svg-icon type="mdi" :path="mdiArrowRightThin" class="w-[30px] h-[30px] text-blue-500"></svg-icon>
-                                <p class="text-blue-500 text-[20px] mr-[10px]">Register</p>
+                            <p class="text-blue-500 text-[20px] ml-[10px]">Already have an account ?</p>
+                            <div class="flex items-center cursor-pointer" @click="login">
+                                <svg-icon type="mdi" :path="mdiArrowRightThin"
+                                    class="w-[30px] h-[30px] text-blue-500"></svg-icon>
+                                <p class="text-blue-500 text-[20px] mr-[10px]">Login</p>
                             </div>
                         </div>
                     </Form>
@@ -35,6 +41,8 @@
             </div>
         </section>
     </div>
+
+
     <footer class="bg-[#01101D] py-[105px]">
         <div>
             <div class="flex justify-around">
@@ -110,7 +118,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import router from '@/router';
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiArrowRightThin, mdiArrowTopRight } from '@mdi/js';
@@ -123,7 +131,8 @@ const store = useAuthStore()
 
 const form = ref({
     username: '',
-    password: ''
+    password: '',
+    phone: ''
 })
 
 const handleSubmit = async (e) => {
@@ -131,25 +140,22 @@ const handleSubmit = async (e) => {
     const data = Object.fromEntries(formData.entries())
     if (!data.username.trim()) {
         Notification({ text: "Enter your Name. Please !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
-    } else if (!data.password.trim()) {
+    } else if (!data.phone.trim()) {
+        Notification({ text: "Enter your Phone. Please !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+    } else if(!data.password.trim()){
         Notification({ text: "Enter your Email. Please !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
-    } else {
-        await store.Login(data)
+    }else {
+        await store.Register(data)
     }
     console.log(data);
 };
 
-const forgotPassword = () => {
-    alert("therefore, it should not be forgotten : )")
-}
-
 const menu = () => {
     router.push({ name: "menu" })
 };
-const register = () => {
-    router.push({ name: "register" })
+const login = () => {
+    router.push({ name: "login" })
 };
-
 
 </script>
 
