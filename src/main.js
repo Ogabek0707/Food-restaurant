@@ -9,6 +9,9 @@ import Aura from '@primeuix/themes/aura';
 
 import App from './App.vue'
 import router from './router'
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const app = createApp(App)
 

@@ -1,5 +1,5 @@
 <template>
-    <section id="hero" class="w-full h-[110vh] img pt-[104px]">
+    <section id="hero" class="w-full h-[100vh] img pt-[104px]">
         <div class="w-full h-full flex justify-center items-center">
             <div class="w-[1022px] flex flex-col justify-center items-center text-center">
                 <div><img src="../assets/images/Union.svg" alt="union"></img></div>
@@ -10,7 +10,7 @@
                     a story.</p>
                 <h2 class="my-[15px] text-[92px] max-w-[798px] text-white leading-[105%] font-semibold">A Symphony of
                     Flavors in Every Bite</h2>
-                <div class="flex gap-[32px]">
+                <div class="flex gap-[32px] mt-[20px]">
                     <button class="py-[13px] px-[17px] bg-[#010614] rounded-[48px] text-white cursor-pointer"
                         @click="menu"><span>Our Menu</span></button>
                     <button class="py-[13px] px-[17px] bg-[#F4C73F] rounded-[48px] cursor-pointer"><span>Reserve a
@@ -72,92 +72,110 @@
             <p class="text-white text-[18px] leading-[26px]">The dishes our chef can’t stop thinking about, and neither
                 will you.</p>
         </div>
-        <div class="w-full flex justify-center items-center flex-wrap gap-[15px] mt-[60px]">
-            <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/ProductImage.png" alt="">
-                <div>
-                    <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Appetizer</span>
-                    <div class="flex items-center gap-[16px] my-[15px]">
-                        <h1 class="text-white text-[20px] font-medium leading-[28px]">Garlic Cheese Bread</h1>
-                        <span class="w-[130px] border-t-[2px] border-[#242424]"></span>
-                        <span class="text-white">$7</span>
+        <div class="flex justify-center">
+            <div class="w-[86%] flex justify-between items-center gap-[40px] mt-[60px]">
+                <div class="flex flex-col gap-[20px]">
+                    <div class="w-[630px] flex gap-[24px]">
+                        <img src="../assets/images/ProductImage.png" alt="">
+                        <div>
+                            <span class="py-[7px] px-[15px] text-white bg-gray-600 rounded-[20px]">Appetizer</span>
+                            <div class="flex items-center gap-[16px] my-[15px]">
+                                <h1 class="text-white text-[20px] font-medium leading-[28px]">Garlic Cheese Bread</h1>
+                                <span class="w-[150px] border-t-[2px] border-[#242424]"></span>
+                                <span class="text-white">$7</span>
+                            </div>
+                            <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">Toasted baguette with a
+                                blend
+                                of
+                                mozzarella cheese and garlic butter. Lorem ipsum dolor sit amet slur hehe wadaw mantap.
+                            </p>
+                        </div>
                     </div>
-                    <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">Toasted baguette with a blend of
-                        mozzarella cheese and garlic butter. Lorem ipsum dolor sit amet slur hehe wadaw mantap.</p>
+                    <div class="w-[630px] flex gap-[24px]">
+                        <img src="../assets/images/make Chicken Wings BBQ from top view.png" alt="">
+                        <div>
+                            <span class="py-[7px] px-[15px] text-white bg-gray-600 rounded-[20px]">Main Course</span>
+                            <div class="flex items-center gap-[16px] my-[15px]">
+                                <h1 class="text-white text-[20px] font-medium leading-[28px]">Chicken Wings BBQ</h1>
+                                <span class="w-[150px] border-t-[2px] border-[#242424]"></span>
+                                <span class="text-white">$11</span>
+                            </div>
+                            <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">
+                                Grilled chicken wings coated in a smoky barbecue glaze with sesame seeds. Juicy, tender,
+                                and
+                                packed with bold flavor in every bite.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-[630px] flex gap-[24px]">
+                        <img src="../assets/images/ProductImage2.png" alt="">
+                        <div>
+                            <span class="py-[7px] px-[15px] text-white bg-gray-600 rounded-[20px]">Main Course</span>
+                            <div class="flex items-center gap-[16px] my-[15px]">
+                                <h1 class="text-white text-[20px] font-medium leading-[28px]">Stuffed Mushrooms</h1>
+                                <span class="w-[150px] border-t-[2px] border-[#242424]"></span>
+                                <span class="text-white">$5</span>
+                            </div>
+                            <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">Oven-roasted mushrooms
+                                filled
+                                with melted cheese, sautéed onions, and a hint of herbs. A perfect balance of creamy and
+                                earthy
+                                flavors.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/make Chicken Wings BBQ from top view.png" alt="">
-                <div>
-                    <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Main Course</span>
-                    <div class="flex items-center gap-[16px] my-[15px]">
-                        <h1 class="text-white text-[20px] font-medium leading-[28px]">Chicken Wings BBQ</h1>
-                        <span class="w-[130px] border-t-[2px] border-[#242424]"></span>
-                        <span class="text-white">$11</span>
+                <div class="flex flex-col gap-[20px]">
+                    <div class="w-[630px] flex gap-[24px]">
+                        <img src="../assets/images/make Creamy Pumpkin Soup from top view at fancy restaurant.png"
+                            alt="">
+                        <div>
+                            <span class="py-[7px] px-[15px] text-white bg-gray-600 rounded-[20px]">Appetizer</span>
+                            <div class="flex items-center gap-[16px] my-[15px]">
+                                <h1 class="text-white text-[20px] font-medium leading-[28px]">Creamy Pumpkin Soup</h1>
+                                <span class="w-[150px] border-t-[2px] border-[#242424]"></span>
+                                <span class="text-white">$11</span>
+                            </div>
+                            <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">
+                                A smooth and velvety pumpkin soup made with fresh cream, seasonal spices, and topped
+                                with
+                                crispy
+                                croutons for extra texture.
+                            </p>
+                        </div>
                     </div>
-                    <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">
-                        Grilled chicken wings coated in a smoky barbecue glaze with sesame seeds. Juicy, tender, and
-                        packed with bold flavor in every bite.
-                    </p>
-                </div>
-            </div>
-            <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/ProductImage2.png" alt="">
-                <div>
-                    <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Main Course</span>
-                    <div class="flex items-center gap-[16px] my-[15px]">
-                        <h1 class="text-white text-[20px] font-medium leading-[28px]">Stuffed Mushrooms</h1>
-                        <span class="w-[130px] border-t-[2px] border-[#242424]"></span>
-                        <span class="text-white">$5</span>
+                    <div class="w-[630px] flex gap-[24px]">
+                        <img src="../assets/images/ProductImage3.png" alt="">
+                        <div>
+                            <span class="py-[7px] px-[15px] text-white bg-gray-600 rounded-[20px]">Appetizer</span>
+                            <div class="flex items-center gap-[16px] my-[15px]">
+                                <h1 class="text-white text-[20px] font-medium leading-[28px]">Bruschetta al Pomodoro
+                                </h1>
+                                <span class="w-[150px] border-t-[2px] border-[#242424]"></span>
+                                <span class="text-white">$8</span>
+                            </div>
+                            <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">
+                                Freshly toasted bread topped with ripe tomatoes, garlic, olive oil, and basil leaves. A
+                                classic
+                                Italian appetizer full of vibrant taste.
+                            </p>
+                        </div>
                     </div>
-                    <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">Oven-roasted mushrooms filled
-                        with melted cheese, sautéed onions, and a hint of herbs. A perfect balance of creamy and earthy
-                        flavors.</p>
-                </div>
-            </div>
-            <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/make Creamy Pumpkin Soup from top view at fancy restaurant.png" alt="">
-                <div>
-                    <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Appetizer</span>
-                    <div class="flex items-center gap-[16px] my-[15px]">
-                        <h1 class="text-white text-[20px] font-medium leading-[28px]">Creamy Pumpkin Soup</h1>
-                        <span class="w-[130px] border-t-[2px] border-[#242424]"></span>
-                        <span class="text-white">$11</span>
+                    <div class="w-[630px] flex gap-[24px]">
+                        <img src="../assets/images/ProductImage4.png" alt="">
+                        <div>
+                            <span class="py-[7px] px-[15px] text-white bg-gray-600 rounded-[20px]">Appetizer</span>
+                            <div class="flex items-center gap-[16px] my-[15px]">
+                                <h1 class="text-white text-[20px] font-medium leading-[28px]">Crispy Caesar Salad</h1>
+                                <span class="w-[150px] border-t-[2px] border-[#242424]"></span>
+                                <span class="text-white">$11</span>
+                            </div>
+                            <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">
+                                Crisp romaine lettuce tossed with garlic croutons, parmesan shavings, and our signature
+                                Caesar
+                                dressing made in-house.
+                            </p>
+                        </div>
                     </div>
-                    <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">
-                        A smooth and velvety pumpkin soup made with fresh cream, seasonal spices, and topped with crispy
-                        croutons for extra texture.
-                    </p>
-                </div>
-            </div>
-            <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/ProductImage3.png" alt="">
-                <div>
-                    <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Appetizer</span>
-                    <div class="flex items-center gap-[16px] my-[15px]">
-                        <h1 class="text-white text-[20px] font-medium leading-[28px]">Bruschetta al Pomodoro</h1>
-                        <span class="w-[130px] border-t-[2px] border-[#242424]"></span>
-                        <span class="text-white">$8</span>
-                    </div>
-                    <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">
-                        Freshly toasted bread topped with ripe tomatoes, garlic, olive oil, and basil leaves. A classic
-                        Italian appetizer full of vibrant taste.
-                    </p>
-                </div>
-            </div>
-            <div class="w-[630px] flex gap-[24px]">
-                <img src="../assets/images/ProductImage4.png" alt="">
-                <div>
-                    <span class="py-[7px] px-[15px] text-white bg-[#1C1C1C] rounded-[20px]">Appetizer</span>
-                    <div class="flex items-center gap-[16px] my-[15px]">
-                        <h1 class="text-white text-[20px] font-medium leading-[28px]">Crispy Caesar Salad</h1>
-                        <span class="w-[130px] border-t-[2px] border-[#242424]"></span>
-                        <span class="text-white">$11</span>
-                    </div>
-                    <p class="max-w-[320px] text-[#D7D7D7] text-[14px] leading-[24px]">
-                        Crisp romaine lettuce tossed with garlic croutons, parmesan shavings, and our signature Caesar
-                        dressing made in-house.
-                    </p>
                 </div>
             </div>
         </div>
@@ -439,7 +457,8 @@
         <div>
             <div class="flex justify-around">
                 <div class="max-w-[500px]">
-                    <h1 class="text-white text-[48px] font-semibold leading-[114.99999999999999%]">Explore Our French-Inspired Dishes</h1>
+                    <h1 class="text-white text-[48px] font-semibold leading-[114.99999999999999%]">Explore Our
+                        French-Inspired Dishes</h1>
                     <button
                         class="bg-[#F4C73F] mt-[30px] py-[14px] px-[18px] font-medium rounded-[24px] flex gap-[10px] cursor-pointer"
                         @click="menu">View Menu <svg-icon type="mdi" class="text-white"
@@ -493,7 +512,9 @@
             </div>
             <div class="flex justify-between w-[86%] m-auto pt-[105px]">
                 <p class="text-[#575757]">©Platieu 2025. All rights reserved.</p>
-                <div class="text-[#575757] flex items-center gap-[8px]">Privacy Policy <p class="w-[6px] h-[6px] bg-[#575757] border border-[#575757] rounded-[50%]"></p> Terms of Services</div>
+                <div class="text-[#575757] flex items-center gap-[8px]">Privacy Policy <p
+                        class="w-[6px] h-[6px] bg-[#575757] border border-[#575757] rounded-[50%]"></p> Terms of
+                    Services</div>
             </div>
             <div class="mt-[50px]">
                 <div class="w-[86%] border-[0.5px] border-[#575757] m-auto"></div>

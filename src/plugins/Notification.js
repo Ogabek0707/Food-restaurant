@@ -5,7 +5,7 @@ const Notification = (text, type, time, description) => {
         createToast({title: text.text ,description: description.description}, {
             type: type.type,
             transition: 'slide',
-            position: "top-right",
+            position: "top-center",
             showIcon: true,
             timeout: time.time
         })

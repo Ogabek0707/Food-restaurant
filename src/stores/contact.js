@@ -12,23 +12,21 @@ export const useContactStore = defineStore('contact', {
     async ContactAdd(payload) {
       try {
         const res = await contactApi.Add(payload)
-        console.log(payload);
         console.log(res);
-
-        // if(res.response == "Phone or Password is incorrect") {
-        //     Notification({ text: "Phone or Password is incorrect !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
-        // }else if(res.message == "User logged in successfully"){
-        //     localStorage.setItem("access_token", res?.access_token);
-        //     localStorage.setItem("refresh_token", res?.refresh_token);
-        //     Notification({ text: "Successful logged in!!!" }, { type: "success" }, { time: "3500" }, { description: "" });
-        //     router.push({ name: "statistics" })
-        // }
+        if(res.name) {
+            Notification({ text: "Thank you for reaching out to us! " }, { type: "success" }, { time: "5000" }, { description: "We have received your message and our team will get back to you within 24 hours." });
+            setTimeout(() => {
+              location.reload()
+            }, 5000);
+        }else if(res.message == "User logged in successfully"){
+            Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+        }
       } catch (err) {
         console.log(err);
         if(err.response?.message == "user not found") {
             Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }else {
-          Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+          Notification({ text: "Oops! Something went wrong !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }
         // Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
 

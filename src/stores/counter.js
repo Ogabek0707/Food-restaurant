@@ -4,13 +4,18 @@ export const useCounterStore = defineStore(
   'counter',
   {
     state: () => ({
-      cart: 0
+      cart: []
     }),
     actions: {
-      count() {
-        this.cart += 1
-        console.log(this.cart);
+      count(item) {
+        this.cart.push(item)
+        console.log(item);
+        // localStorage.setItem("selectedFood", `${this.cart}`)
+        setTimeout(() => {
+          console.log(this.cart.length);
+        }, 1000);
       }
+      
     }
   }
 )
