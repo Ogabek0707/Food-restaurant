@@ -56,7 +56,7 @@ export const useAuthStore = defineStore('auth', {
             localStorage.setItem("id", res.id)
             setTimeout(() => {
               router.push({name: 'home'})
-            }, 3500);
+            }, 3000);
             setTimeout(() => {
                 location.reload()
             }, 3700);
