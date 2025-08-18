@@ -16,7 +16,7 @@ export const useOrderStore = defineStore('order', {
         if(res.id) {
             Notification({ text: "Your order has been received. " }, { type: "success" }, { time: "5000" }, { description: "We will deliver it shortly." });
             setTimeout(() => {
-                router.push({name: "home"})
+                // router.push({name: "home"})
               location.reload()
             }, 5000);
         }else {
