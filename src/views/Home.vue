@@ -13,7 +13,7 @@
                 <div class="flex gap-[32px] mt-[20px]">
                     <button class="py-[13px] px-[17px] bg-[#010614] rounded-[48px] text-white cursor-pointer hover:scale-[1.2]"
                         @click="menu"><span>Our Menu</span></button>
-                    <button class="py-[13px] px-[17px] bg-[#F4C73F] rounded-[48px] cursor-pointer hover:scale-[1.1]"><span>Reserve a
+                    <button class="py-[13px] px-[17px] bg-[#F4C73F] rounded-[48px] cursor-pointer hover:scale-[1.1]" @click="order"><span>Reserve a
                             Seat</span></button>
                 </div>
             </div>
@@ -596,6 +596,9 @@ const testimonials = [
 
 const menu = () => {
     router.push({ name: "menu" })
+}
+const order = () => {
+    router.push({ name: "cart" })
 }
 
 </script>
