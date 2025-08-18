@@ -24,12 +24,19 @@ export const useOrderStore = defineStore('order', {
         }
       } catch (err) {
         console.log(err);
-        if(err.response?.message == "user not found") {
-            Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+        if(err.response?.data.detail == "Authentication credentials were not provided.") {
+            Notification({ text: "Authentication credentials were not provided." }, { type: "danger" }, { time: "3500" }, { description: "" });
+            localStorage.removeItem("access");
+            localStorage.removeItem("refresh");
+            localStorage.removeItem("username");
+            window.location.href = "/login";
+            setTimeout(() => {
+                location.reload()
+            }, 1000);
         }else {
           Notification({ text: "Oops! Something went wrong !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }
-        Notification({ text: "Oops! Something went wrong !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+        // Notification({ text: "Oops! Something went wrong !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
 
       }
     },
