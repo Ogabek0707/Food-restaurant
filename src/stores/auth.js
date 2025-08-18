@@ -22,10 +22,10 @@ export const useAuthStore = defineStore('auth', {
             localStorage.setItem("refresh", res?.refresh);
             setTimeout(() => {
                 router.push({name: "home"})
-            }, 3500);
+            }, 3000);
             setTimeout(() => {
                 location.reload()
-            }, 3600);
+            }, 3700);
         }else if(res.message == "User logged in successfully"){
             // Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }
