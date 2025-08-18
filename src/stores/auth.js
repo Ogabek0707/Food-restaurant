@@ -50,7 +50,7 @@ export const useAuthStore = defineStore('auth', {
         console.log(res);
         if(res.tokens?.access) {
             Notification({ text: "You have successfully registered. " }, { type: "success" }, { time: "3500" }, { description: "" });
-            localStorage.setItem("access_token", res?.tokens?.access);
+            localStorage.setItem("access", res?.tokens?.access);
             localStorage.setItem("username", res.username)
             localStorage.setItem("phone", res.phone)
             setTimeout(() => {
