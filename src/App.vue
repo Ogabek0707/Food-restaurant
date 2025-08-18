@@ -9,7 +9,7 @@
           </div>
         </div>
         <div class="flex text-white">
-          <div v-if="username" class="flex items-center cursor-pointer"><svg-icon type="mdi" :path="mdiAccount" class="text-white w-[27px] h-[27px]" /><span class="pl-[5px]">{{ username }}</span></div>
+          <div v-if="username" class="flex items-center cursor-pointer" @click="login"><svg-icon type="mdi" :path="mdiAccount" class="text-white w-[27px] h-[27px]" /><span class="pl-[5px]">{{ username }}</span></div>
           <div v-else class="flex items-center cursor-pointer" @click="login"><svg-icon type="mdi" :path="mdiAccount" class="text-white w-[27px] h-[27px]" /><span class="pl-[5px]">Login</span></div>
           <div class="flex items-center pl-[40px] cursor-pointer relative" @click="carts"><svg-icon type="mdi" :path="mdiCart" class="text-white w-[27px] h-[27px]" /><span class="pl-[5px]">Cart</span> <span v-if="cart.length > 0" class="absolute  right-[-28px]  bg-red-500 text-white text-[13px] font-bold px-[7px] py-[2px] rounded-[4px]">{{ cart.length }}</span></div>
         </div>
