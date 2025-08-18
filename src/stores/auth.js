@@ -53,6 +53,7 @@ export const useAuthStore = defineStore('auth', {
             localStorage.setItem("access", res?.tokens?.access);
             localStorage.setItem("username", res.username)
             localStorage.setItem("phone", res.phone)
+            localStorage.setItem("id", res.id)
             setTimeout(() => {
               router.push({name: 'home'})
             }, 3500);
@@ -69,6 +70,12 @@ export const useAuthStore = defineStore('auth', {
             setTimeout(() => {
                 router.push({name: "login"})
             }, 3500);
+        }else if(err.response.data.detail == "Given token not valid for any token type"){
+          Notification({ text: "Oops! Something went wrong !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+          localStorage.clear()
+          setTimeout(() => {
+            location.reload()
+          }, 1000);
         }else {
           Notification({ text: "Oops! Something went wrong !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }

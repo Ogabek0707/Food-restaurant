@@ -33,6 +33,11 @@ const router = createRouter({
       name: 'cart',
       component: () => import('../views/Korzinka.vue'),
     },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/Profile.vue'),
+    },
   ],
 })
 
