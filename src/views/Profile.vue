@@ -156,10 +156,12 @@ const forgotPassword = () => {
 }
 const logOut = () => {
     localStorage.removeItem("username")
-    localStorage.removeItem("phone")
-    localStorage.clear()
-    router.push({name: "login"})
-
+    localStorage.removeItem("selectedFood")
+    localStorage.removeItem("access")
+    // localStorage.clear()
+    setTimeout(() => {
+        router.push({name: "login"})
+    }, 0);
     setTimeout(() => {
         location.reload()
     }, 200);
