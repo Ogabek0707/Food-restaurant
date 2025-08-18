@@ -132,7 +132,7 @@ const handleSubmit = async (e) => {
     if (!data.username.trim()) {
         Notification({ text: "Enter your Name. Please !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
     } else if (!data.password.trim()) {
-        Notification({ text: "Enter your Email. Please !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+        Notification({ text: "Enter your Password. Please !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
     } else {
         await store.Login(data)
     }

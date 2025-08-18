@@ -11,9 +11,9 @@
                 <h2 class="my-[15px] text-[92px] max-w-[798px] text-white leading-[105%] font-semibold">A Symphony of
                     Flavors in Every Bite</h2>
                 <div class="flex gap-[32px] mt-[20px]">
-                    <button class="py-[13px] px-[17px] bg-[#010614] rounded-[48px] text-white cursor-pointer"
+                    <button class="py-[13px] px-[17px] bg-[#010614] rounded-[48px] text-white cursor-pointer hover:scale-[1.2]"
                         @click="menu"><span>Our Menu</span></button>
-                    <button class="py-[13px] px-[17px] bg-[#F4C73F] rounded-[48px] cursor-pointer"><span>Reserve a
+                    <button class="py-[13px] px-[17px] bg-[#F4C73F] rounded-[48px] cursor-pointer hover:scale-[1.1]"><span>Reserve a
                             Seat</span></button>
                 </div>
             </div>
@@ -180,8 +180,8 @@
             </div>
         </div>
         <div class="text-center mt-[60px]">
-            <button class="bg-[#F4C73F] text-black py-[14px] px-[20px] rounded-[24px] cursor-pointer"
-                @click="menu">Explore Our Menu</button>
+            <button class="bg-[#F4C73F] text-black py-[14px] px-[20px] rounded-[24px] cursor-pointer hover:scale-[1.1]"
+                @click="menu"><span>Explore Our Menu</span></button>
         </div>
     </section>
 
@@ -272,7 +272,7 @@
                                 Policy.</span></p>
                     </div>
                     <Button unstyled type="submit" label="Send Message"
-                        class="bg-[#F4C73F] py-[12px] rounded-[24px] mt-[5px]" />
+                        class="bg-[#F4C73F] py-[12px] rounded-[24px] mt-[5px] hover:bg-yellow-500" />
                 </Form>
             </div>
             <div class="mt-[-15px]">
@@ -448,7 +448,7 @@
             </div>
         </div>
         <div class="text-center mt-[50px]">
-            <button class="bg-[#F4C73F] py-[14px] px-[20px] rounded-[24px] cursor-pointer"><span>View
+            <button class="bg-[#F4C73F] py-[14px] px-[20px] rounded-[24px] cursor-pointer hover:scale-[1.1]"><span>View
                     All</span></button>
         </div>
     </section>
@@ -460,14 +460,14 @@
                     <h1 class="text-white text-[48px] font-semibold leading-[114.99999999999999%]">Explore Our
                         French-Inspired Dishes</h1>
                     <button
-                        class="bg-[#F4C73F] mt-[30px] py-[14px] px-[18px] font-medium rounded-[24px] flex gap-[10px] cursor-pointer"
+                        class="bg-[#F4C73F] mt-[30px] py-[14px] px-[18px] font-medium rounded-[24px] flex gap-[10px] cursor-pointer hover:scale-[1.1]"
                         @click="menu">View Menu <svg-icon type="mdi" class="text-white"
                             :path="mdiArrowTopRight"></svg-icon></button>
                 </div>
                 <div class="flex flex-col gap-[20px]">
-                    <a href="/" class="text-[#575757] text-[20px]">Home</a>
-                    <a href="/menu" class="text-[#575757] text-[20px]">Menu</a>
-                    <a href="location" class="text-[#575757] text-[20px]">Location</a>
+                    <a href="/" class="text-[#575757] text-[20px] hover:text-white">Home</a>
+                    <a href="/menu" class="text-[#575757] text-[20px] hover:text-white">Menu</a>
+                    <a href="/location" class="text-[#575757] text-[20px] hover:text-white">Location</a>
                 </div>
                 <div>
                     <p class="text-white text-[18px] font-semibold">Connect On</p>

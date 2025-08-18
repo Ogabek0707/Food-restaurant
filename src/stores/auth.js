@@ -13,19 +13,28 @@ export const useAuthStore = defineStore('auth', {
     async Login(payload) {
       try {
         const res = await authApi.Login(payload)
+        localStorage.setItem("username", payload.username)
+        // localStorage.setItem("phone", payload.phone)
         console.log(res);
-        // if(res.name) {
-        //     Notification({ text: "Thank you for reaching out to us! " }, { type: "success" }, { time: "5000" }, { description: "We have received your message and our team will get back to you within 24 hours." });
-        //     setTimeout(() => {
-        //       location.reload()
-        //     }, 5000);
-        // }else if(res.message == "User logged in successfully"){
-        //     Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
-        // }
+        if(res?.access) {
+            Notification({ text: "Successfully logged in " }, { type: "success" }, { time: "3500" }, { description: "" });
+            localStorage.setItem("access", res?.access);
+            localStorage.setItem("refresh", res?.refresh);
+            setTimeout(() => {
+                router.push({name: "home"})
+            }, 3500);
+            setTimeout(() => {
+                location.reload()
+            }, 3600);
+        }else if(res.message == "User logged in successfully"){
+            // Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+        }
       } catch (err) {
         console.log(err);
         if(err.response?.data.detail == "No active account found with the given credentials") {
             Notification({ text: "User not found !!!" }, { type: "danger" }, { time: "3500" }, { description: "Please register!" });
+            localStorage.removeItem("username")
+            localStorage.removeItem("phone")
             setTimeout(() => {
                 router.push({name: "register"})
             }, 3500);
@@ -42,15 +51,20 @@ export const useAuthStore = defineStore('auth', {
         if(res.tokens?.access) {
             Notification({ text: "You have successfully registered. " }, { type: "success" }, { time: "3500" }, { description: "" });
             localStorage.setItem("access_token", res?.tokens?.access);
+            localStorage.setItem("username", res.username)
+            localStorage.setItem("phone", res.phone)
             setTimeout(() => {
               router.push({name: 'home'})
             }, 3500);
+            setTimeout(() => {
+                location.reload()
+            }, 3600);
         }else if(res.message == "User logged in successfully"){
             Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }
       } catch (err) {
         console.log(err);
-        if(err.response?.data.username == "user with this phone already exists.") {
+        if(err.response?.data.phone == "user with this phone already exists.") {
             Notification({ text: "You are already registered !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
             setTimeout(() => {
                 router.push({name: "login"})

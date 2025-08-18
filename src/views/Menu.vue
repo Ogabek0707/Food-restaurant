@@ -29,7 +29,7 @@
             <div class="w-[86%] flex justify-between items-center gap-[40px] mt-[60px]">
                 <div class="grid grid-cols-2 gap-[40px]">
 
-                    <div class="w-[630px] flex gap-[24px]" v-for="item in store?.typesFood" :key="item">
+                    <div class="w-[630px] flex gap-[24px]" v-for="item in filteredFood" :key="item">
                         <div><img :src="item.img" alt=""></img></div>
                         <div>
                             <div class="flex items-center gap-[16px] mt-[5px] mb-[10px]">
@@ -43,7 +43,7 @@
                                 <span class="py-[7px] px-[15px] text-white bg-gray-600 rounded-[20px]">{{ item.type
                                     }}</span>
                                 <button
-                                    class="flex gap-[5px] py-[5px] px-[15px] bg-gray-600 text-[#F4C73F] rounded-[20px]"
+                                    class="flex gap-[5px] py-[5px] px-[15px] bg-gray-600 text-[#F4C73F] rounded-[20px] hover:scale-[1.1]"
                                     @click="add(item)"><svg-icon type="mdi" :path="mdiCart"
                                         class=" w-[27px] h-[27px]" /><span class="">Add to cart</span></button>
                             </div>
@@ -195,14 +195,14 @@
                     <h1 class="text-white text-[48px] font-semibold leading-[114.99999999999999%]">Explore Our
                         French-Inspired Dishes</h1>
                     <button
-                        class="bg-[#F4C73F] mt-[30px] py-[14px] px-[18px] font-medium rounded-[24px] flex gap-[10px] cursor-pointer"
+                        class="bg-[#F4C73F] mt-[30px] py-[14px] px-[18px] font-medium rounded-[24px] flex gap-[10px] cursor-pointer hover:scale-[1.1]"
                         @click="menu">View Menu <svg-icon type="mdi" class="text-white"
                             :path="mdiArrowTopRight"></svg-icon></button>
                 </div>
                 <div class="flex flex-col gap-[20px]">
-                    <a href="/" class="text-[#575757] text-[20px]">Home</a>
-                    <a href="/menu" class="text-[#575757] text-[20px]">Menu</a>
-                    <a href="location" class="text-[#575757] text-[20px]">Location</a>
+                    <a href="/" class="text-[#575757] text-[20px] hover:text-white">Home</a>
+                    <a href="/menu" class="text-[#575757] text-[20px] hover:text-white">Menu</a>
+                    <a href="/location" class="text-[#575757] text-[20px] hover:text-white">Location</a>
                 </div>
                 <div>
                     <p class="text-white text-[18px] font-semibold">Connect On</p>
@@ -262,7 +262,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted  } from 'vue';
+import { ref, onMounted, computed  } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Navigation } from 'swiper/modules';
 import img1 from "../assets/images/Testimonial Item.svg"
@@ -284,6 +284,13 @@ const select = (item) => {
     active.value = item
     console.log("Selected", item);
 }
+
+const filteredFood = computed(() => {
+  if (active.value === "All Menu") {
+    return store.typesFood
+  }
+  return store.typesFood.filter(food => food.type === active.value)
+})
 
 const add = (item) => {
     let cart = JSON.parse(localStorage.getItem("selectedFood")) || []

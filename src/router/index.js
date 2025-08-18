@@ -28,6 +28,11 @@ const router = createRouter({
       name: 'register',
       component: () => import('../views/Register.vue'),
     },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: () => import('../views/Korzinka.vue'),
+    },
   ],
 })
 
