@@ -256,13 +256,13 @@ const order = async () => {
   let total_price = {
     total_price: total
   }
-  let a = [...payload,total_price]
+  let a = [...payload]
 
   let name = localStorage.getItem("username")
   let phone = localStorage.getItem("phone")
 
   let item = {
-    array: a,
+    items: a,
     name: name
   }
 

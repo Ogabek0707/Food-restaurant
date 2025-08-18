@@ -89,15 +89,11 @@ const handleSubmit = async (e) => {
         let items = {
             ...products.value
         }
-        let information = {
-            username: data.username,
-            phone: data.phone,
-            address: data.address,
-        }
         let payload = {
             items: items,
-            information
+            address: data.address,
         }
+        console.log(payload);
         // console.log(items);
         return await store.createOrder(payload)
     }
@@ -107,11 +103,11 @@ const handleSubmit = async (e) => {
 const openModal = (item) => {
     if(item) {
         dialog.value = true
-        // form.value.name = item.name
-        products.value = item.array
+        products.value = item.items
     }else{
         products.value = ''
     }
+    console.log(item);
 }
 
 defineExpose({ openModal });
