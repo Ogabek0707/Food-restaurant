@@ -59,7 +59,7 @@ export const useAuthStore = defineStore('auth', {
             }, 3500);
             setTimeout(() => {
                 location.reload()
-            }, 3600);
+            }, 3700);
         }else if(res.message == "User logged in successfully"){
             Notification({ text: "Oops! Something went wrong. !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
         }
