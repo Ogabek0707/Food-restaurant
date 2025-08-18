@@ -33,8 +33,13 @@ export const useOrderStore = defineStore('order', {
             setTimeout(() => {
                 location.reload()
             }, 1000);
-        }else {
+        }else if(err.response?.data.detail == "Given token not valid for any token type") {
           Notification({ text: "Oops! Something went wrong !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
+          localStorage.clear()
+          router.push({name: "login"})
+          setTimeout(() => {
+            location.reload()
+          }, 200);
         }
         // Notification({ text: "Oops! Something went wrong !!!" }, { type: "danger" }, { time: "3500" }, { description: "" });
 
