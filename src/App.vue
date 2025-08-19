@@ -135,7 +135,7 @@ onMounted(() => {
   // 1-variant: minimal vaqt kutish (masalan 1.5s)
   setTimeout(() => {
     loading.value = false;
-  }, 1500);
+  }, 2000);
 
   // 2-variant: sahifadagi rasmlar yuklanganda
   // window.addEventListener("load", () => {
